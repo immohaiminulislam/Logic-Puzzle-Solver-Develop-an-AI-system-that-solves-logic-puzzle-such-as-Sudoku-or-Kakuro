@@ -39,6 +39,11 @@ Developed by:
 
 Simply host the files on any web server or open `index.html` locally.
 
-## License
+## Screenshots
+<img width="1824" height="682" alt="image" src="https://github.com/user-attachments/assets/65067b27-d13d-4770-9114-4fba7a7284ab" />
+<img width="1833" height="591" alt="image" src="https://github.com/user-attachments/assets/b439f119-3dd2-4d7e-854c-e1e50c7ddab2" />
+<img width="1864" height="756" alt="image" src="https://github.com/user-attachments/assets/aa0b68b9-e401-450a-8826-6d83be0cc32d" />
+<img width="1830" height="767" alt="image" src="https://github.com/user-attachments/assets/2ba96fa4-1a1b-4667-bd9c-452fc027b7ab" />
 
-MIT License - 2025
+
+
