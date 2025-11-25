@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku Solver - AI CSP</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Rajdhani:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/sudoku.css">
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="container">
+        <header class="page-header">
+            <a href="index.html" class="back-btn">← Back</a>
+            <h1>Sudoku Solver</h1>
+        </header>
+
+        <div class="solver-layout">
+            <div class="puzzle-area">
+                <div id="sudoku-grid" class="sudoku-grid"></div>
+            </div>
+
+            <div class="control-panel">
+                <div class="controls-section">
+                    <h3>Controls</h3>
+                    <select id="difficulty" class="control-select">
+                        <option value="easy">Easy</option>
+                        <option value="medium">Medium</option>
+                        <option value="hard">Hard</option>
+                        <option value="expert">Expert</option>
+                    </select>
+                    <button id="generate" class="btn btn-primary">Generate Puzzle</button>
+                    <button id="solve" class="btn btn-secondary">Solve with AI</button>
+                    <button id="reset" class="btn btn-outline">Reset</button>
+                </div>
+
+                <div class="stats-section">
+                    <h3>Statistics</h3>
+                    <div class="stat-item">
+                        <span class="stat-label">Time:</span>
+                        <span id="time" class="stat-value">0.00s</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Nodes:</span>
+                        <span id="nodes" class="stat-value">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Status:</span>
+                        <span id="status" class="stat-value">Ready</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p class="footer-title">✨ Developed By</p>
+            <div class="team-credits">
+                <span class="team-member" style="color: #FF10F0; text-shadow: 0 0 10px #FF10F0;">Mohaiminul</span>
+                <span class="team-member" style="color: #BF00FF; text-shadow: 0 0 10px #BF00FF;">Ishfaque</span>
+                <span class="team-member" style="color: #00F5FF; text-shadow: 0 0 10px #00F5FF;">Mahir</span>
+                <span class="team-member" style="color: #FF10F0; text-shadow: 0 0 10px #FF10F0;">Mahdiur</span>
+                <span class="team-member" style="color: #BF00FF; text-shadow: 0 0 10px #BF00FF;">Maisha</span>
+            </div>
+            <p class="footer-subtitle">AI-Powered CSP Solver | 2025</p>
+        </div>
+    </footer>
+
+    <script src="js/csp.js"></script>
+    <script src="js/sudoku-solver.js"></script>
+    <script src="js/sudoku-ui.js"></script>
+</body>
+</html>

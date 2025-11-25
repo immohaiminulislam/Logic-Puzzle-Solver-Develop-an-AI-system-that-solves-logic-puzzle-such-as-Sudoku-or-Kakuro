@@ -1,0 +1,185 @@
+/* Sudoku Specific Styles */
+
+.page-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.back-btn {
+    background: rgba(0, 245, 255, 0.1);
+    border: 1px solid var(--cyber-cyan);
+    color: var(--cyber-cyan);
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+    background: rgba(0, 245, 255, 0.2);
+    box-shadow: 0 0 15px rgba(0, 245, 255, 0.5);
+}
+
+.page-header h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5rem;
+    color: var(--cyber-magenta);
+    text-shadow: 0 0 20px rgba(255, 16, 240, 0.6);
+}
+
+.solver-layout {
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: 40px;
+}
+
+.puzzle-area {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.sudoku-grid {
+    display: grid;
+    grid-template-columns: repeat(9, 50px);
+    grid-template-rows: repeat(9, 50px);
+    gap: 0;
+    background: rgba(0, 245, 255, 0.1);
+    border: 3px solid var(--cyber-cyan);
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: 0 0 40px rgba(0, 245, 255, 0.3);
+}
+
+.sudoku-cell {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(10, 14, 39, 0.8);
+    border: 1px solid rgba(0, 245, 255, 0.2);
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--cyber-cyan);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.sudoku-cell:hover {
+    background: rgba(0, 245, 255, 0.15);
+    box-shadow: inset 0 0 15px rgba(0, 245, 255, 0.3);
+}
+
+.sudoku-cell.given {
+    background: rgba(191, 0, 255, 0.2);
+    color: var(--cyber-purple);
+    font-weight: 700;
+}
+
+.sudoku-cell.filled {
+    background: rgba(0, 245, 255, 0.2);
+    box-shadow: inset 0 0 10px rgba(0, 245, 255, 0.4);
+}
+
+.sudoku-cell.conflict {
+    background: rgba(255, 0, 60, 0.3);
+    color: var(--cyber-error);
+    animation: pulse-error 0.5s ease;
+}
+
+@keyframes pulse-error {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+.sudoku-cell.success {
+    background: rgba(0, 255, 65, 0.3);
+    color: var(--cyber-success);
+    animation: pulse-success 0.5s ease;
+}
+
+@keyframes pulse-success {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+.control-panel {
+    background: rgba(10, 14, 39, 0.8);
+    border: 2px solid rgba(0, 245, 255, 0.3);
+    border-radius: 15px;
+    padding: 30px;
+    backdrop-filter: blur(10px);
+}
+
+.controls-section, .stats-section {
+    margin-bottom: 30px;
+}
+
+.controls-section h3, .stats-section h3 {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--cyber-magenta);
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+}
+
+.control-select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    background: rgba(5, 8, 23, 0.8);
+    border: 1px solid rgba(0, 245, 255, 0.3);
+    border-radius: 8px;
+    color: var(--cyber-cyan);
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.control-select:focus {
+    outline: none;
+    border-color: var(--cyber-cyan);
+    box-shadow: 0 0 15px rgba(0, 245, 255, 0.4);
+}
+
+.btn {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.stat-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(0, 245, 255, 0.1);
+}
+
+.stat-label {
+    color: rgba(0, 245, 255, 0.7);
+}
+
+.stat-value {
+    color: var(--cyber-cyan);
+    font-weight: 600;
+}
+
+@media (max-width: 1024px) {
+    .solver-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .sudoku-grid {
+        grid-template-columns: repeat(9, 40px);
+        grid-template-rows: repeat(9, 40px);
+    }
+
+    .sudoku-cell {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+}
